@@ -1,0 +1,734 @@
+
+%% bare_conf.tex
+%% V1.3
+%% 2007/01/11
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE!
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
+%%*************************************************************************
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[10pt, conference, compsocconf]{IEEEtran}
+% Add the compsocconf option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
+% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+\usepackage{array}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{algorithm}
+
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+\bibliographystyle{plain}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{HBaseSpatial:a Scalable Spatial Data Storage Based on Hbase}
+
+
+% author names and affiliations
+% use a multiple column layout for up to two different
+% affiliations
+
+\author{\IEEEauthorblockN{Ningyu Zhang}
+\IEEEauthorblockA{Department of Computer Science\\
+Zhejiang University\\
+Hangzhou, China\\
+zxlzr@zju.edu.cn}
+\and
+\IEEEauthorblockN{Huajun Chen}
+\IEEEauthorblockA{Department of Computer Science\\
+Zhejiang University\\
+Hangzhou, China\\
+huajunsir@zju.edu.cn}
+\and
+\IEEEauthorblockN{Xi Chen}
+\IEEEauthorblockA{Department of Computer Science\\
+Zhejiang University\\
+Hangzhou, China\\
+xichen@zju.edu.cn}
+}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+%
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3},
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+Recent years, the scale of spatial data is developing more and more huge, and its storage  has encountered a lot of problems. Traditional DBMS  can efficiently handle some big spatial data. However, popular open source relational database systems are overwhelmed by the high insertion rates, querying requirements  and terabytes of data that these systems can handle. On the other hand, key-value storage can efficiently support large-scale operations. To resolve the problems of big vector spatial data's storage and query, we bring forward HBaseSpatial:a scalable spatial dada storage based on HBase. At first, we analyze the distributed storage model of HBase. Then, we design a  storage and index  model. Finally, the advantages of  our storage model and index algorithm are proven by experiments with both large sample sets and typical benchmarks on the cluster compared with MongoDB and Mysql, which shows that HBaseSpatial can efficiently enhance the query speed of big spatial data  and provide a good solution for storage.
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+Big Spatial Data;Distributed;HBase
+
+\end{IEEEkeywords}
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+\section{Introduction}
+% no \IEEEPARstart
+
+% You must have at least 2 lines in the paragraph with the drop letter
+% (should never be an issue)
+
+   With the advancements of data-acquisition techniques, large amounts of spatial data have been collected from multiple data sources, such as satellite observations, remotely sensed imagery, aerial photography, and model simulations. The spatial data is growing exponentially to PB (Petabyte)scale even EB (Exabyte) scale\cite{zhong2012distributed}.
+
+
+As an important spatial data type in the field, vector data has been widely used in spatial information area. However, because it has a large amount of data, variable-length data records, etc., how to store and manage large expansion of vector data become a topic of research.
+Geographic data is the Earth's surface as a basic reference framework for spatial data and attribute information. In order to facilitate the acquisition, storage, analysis and management of geographic data, we establish a Geographic Information System, or GIS systems (geographic information system). GIS system represents each target of the real  world, such as roads, land, elevation and more. Vector data and raster data are commonly used data structures in GIS. In vector data structure, an area is  divided among a plurality of polygons, each polygon by a number of line segments or arc's components. Vector data structure stores a small amount of data and  graphics with high precision, which is  easy to define a single spatial object. However, when dealing with spatial relationships it compares time-consuming, so it is  often used to describe the graphical data. Raster data structure, to the entities within the grid cell within the row and column logo, it is simple and easy to handle spatial relationship. However, its data storage capacity and  graphics accuracy is low, which is commonly used to describe images and image data.
+
+Currently, we mostly use the file system to manage raster data  and  databases to manage vector data. However, vector data not only has the structured data which is suitable for   traditional relational database to manage, but  includes some unstructured data, which is unsuitable. At present, present the major database vendors finally continue to optimize the management of vector data. Many manufacturers in their products support and extend  on the realization of the vector data.
+   Most solutions are to store the attribute data  associated with vector data  in a traditional relational database, and the really spatial data is stored in other databases or  using middleware. However, most of their functional is not perfect, which has some drawbacks.
+
+Moreover, the spatial data, particularly vector data, which  not only has variable length in  the real part from the vector data  and  non-uniform of all kinds, but also  has the number  and  type  of inconsistencies within  the attribute data related to the vector data. For example, vector data for a typical shape file document, the distinct attributes for the shape file's data field type, the number of fields and the fields are different meaning. If we use the conventional relational database  to store, we may need to create a lot of tables.  These data are not structured data, which means the use of traditional relational database storage is not very appropriate.
+
+SQL database provides a rich semantic support  for complex queries, but for a relatively simple spatial data query, these  semantic features are not used  in spatial data processing, which  cause an additional system resources waste  in storage and query. For the current GIS systems, spatial data is the huge amount of data. With the increasing scale of vector data, the processing power of a singular node will progressively become a bottleneck. Single point of failure problem has imperceptibly become severe. The more traditional relational database running on a unique node, the  higher the  cost of supporting distributed database and configuration costs will be. And most of the relational database cluster performance and scalability are not very good.
+
+Thus, with the characteristics  of  the unstructured or semi-structured data volume of the vector data, its storage, query and management should be taken full account of these characteristics, the use of traditional relational database to store and on the vector data, management has been not very appropriate. HBase  is a high-reliability, high performance, column-oriented, scalable, distributed storage system\cite{bao2012massive}\cite{ma2012efficient}\cite{bae2012mobis}\cite{bai2013spatial}. HBase by adding low-cost commodity servers to increase the computing power and storage capacity, is primarily used for storing unstructured and semi-structured data lose. These features are just HBase  suitable for large-scale vector data's storage, analysis and management\cite{zhong2012towards}\cite{li2013mhb}.
+
+
+
+   In a view of this, in this paper  we propose a
+ HBase based big vector spatial data-storage system.
+The framework can support very large scale distributed vector spatial data storage and management  and vector data for the spatial extent of secondly indexes. The range can support fast queries based on geographic location  with higher access con currency. Based on HBaseSpatial, we  can also  easily extend the data size.
+Our proposal has several significant characteristics.
+
+1)We propose the design of distributed vector spatial data  storage and index based on the HBase.
+
+
+2)We demonstrate how this design can be used to improve the efficiency of  storage and management of spatial data.
+
+The remaining of the paper is organized as follows. In Sect. 2, we describe
+related work of distributed storage of big vector spatial data.
+. Section 3 gives the details of Vector spatial data storage and indexing. Section
+4 shows our experiments and result evaluation. Section 5 is the conclusion.
+
+
+
+
+
+
+
+
+
+\section{Related Work}
+\subsection{Conventional  SQL Based  Spatial Data Storage}
+Conventional  SQL based  spatial data-storage system provides a straightforward formal structure for storing and managing information in tables. Data storage and retrieval are implemented with simple tables. The multiuser geodatabase utilizes the power of the RDBMS. Certain characteristics of geographic data management, such as disk-based storage, definition of attribute types, query processing, and multiuser transaction processing, are delegated to the RDBMS.
+
+   MySQL spatial provides a basic implementation of OGCs SFS
+for SQL standard, but query and analysis operations utilize
+bounding rectangles instead of true geometries\cite{mingbo2004analysis}.
+MySQL Spatial has some substantial disadvantages. On the plus side, it does have spatial types, functions and an index. And it follows the OGC specification for geometry representations. However, the number of functions MySQL supports is very small, and as a result it is difficult to use the database for anything more complex than simple storage and retrieval-by-bounding-box use cases. Additionally, because the spatial option is implemented in the (non-transactional) MyISAM table type, it is not possible to use spatial objects within transactions.
+
+PostgreSQL was designed from the very start with type extension in mind ¨C the ability to add new data types, functions and access methods at run-time\cite{momjian2001postgreSQL}\cite{obe2011postgis}\cite{blasby2001building}. Because of this, the PostGIS extension was developed by a separate development team, yet still integrate very tightly into the core PostgreSQL database.
+PostGIS began following the OGC SFSQL\cite{gould2001ogc} document early in the development process, and it achieved full specification coverage.
+
+ Conventional  SQL based  spatial data-storage system do have some advantages, which significantly lower the development time of client applications. It offsets complicated tasks to the DB server. Organization and index have done for you, and you  do not have to re-implement operators's functions.Moreover,you can use simple SQL expressions to determine spatial relationships and perform spatial operations.However,disadvantages of conventional  SQL based  spatial data-storage system are clear. Cost of implemention of the data base system can be high and when the scale of spatial data is developing more and more huge.Neverthless,conventional  SQL based  spatial data-storage system incompatibilities with some GIS software and are slower than local, specialized data structures\cite{bartholomew2010SQL}.
+
+
+
+
+
+\subsection{NoSQL Baesd Spatial Data Storage}
+
+ Spatial data can be stored by traditional SQL databases and also by NoSQL databases\cite{chodorow2010mongodb}\cite{cattell2011scalable}\cite{zhong2012elastic}.
+   NoSQL databae systems are designed to scale to thousands or millions of users doing updates as well as reads in contrast to traditional DBMSs and data warehouses. NoSQL database systems are often highly optimized for retrieval and appending operations and often offer little functionality beyond record storage (e.g. key¨Cvalue stores). In short, NoSQL database management systems are useful when working with a huge quantity of data (especially big data) when the data's nature does not require a relational model\cite{strauch2011NoSQL}.
+
+MongoDB is a scalable, high-performance, open source, schema-free, document-oriented database.
+MongoDB has direct support for spatial data  and index along with features like finding nearby locations
+creating a geospatial index on legacy coordinate pairs\cite{chodorow2010mongodb}.MongoDB computes geohash values for the coordinate pairs within the specified range and indexes the geohash values.
+Geohash is a latitude/longitude geocode system. In spite of spite of MongoDB, other NoSQL databaese do not natively support spatial index, but this can be extended via geohashing\cite{balkic2012geohash}\cite{ali2012crowdits}.
+
+MD-HBase is a scalable data-management system for  LBSs that bridge this gap between scale and functionality, which
+approaches leverages a multi-dimensional index structure layered
+over a Key-value store\cite{nishimura2011md}. The underlying Key-value store allows
+the system to sustain high insert throughput and large data
+volumes, while ensuring fault-tolerance, and high availability. On
+the other hand, the index layer allows efficient multi-dimensional
+query processing.
+
+SpatialHadoop is an open-source MapReduce framework designed specifically to handle huge datasets of spatial data, which is shipped with built-in spatial high level language, spatial data types, spatial indexes and efficient spatial operations. SpatialHadoop can interact within the system easily with a simple high level language and load all  datasets in SpatialHadoop with the built-in spatial data types.Moreover,Spatialhadoop can also store your data efficiently in a spatial index of your choice and  analyze your data on large clusters with built-in spatial operations.
+
+     CloST is  a scalable big spatio-temporal data-storage system which can  support data analytics using Hadoop\cite{tan2012clost}.The main objective of CloST is to avoid scanning the whole dataset when a spatio-temporal range is given. CloST  uses a novel data model which has special treatments on three core attributes, including an object id, a location and a time. Based on this data model, its hierarchically partition's data using all core attributes which enable efficient parallel processing of spatio-temporal range scans. According to the data characteristics, CloST  devises a compact storage structure which reduces the storage size by an order of magnitude.
+
+
+
+
+
+
+
+    In short, because SQL databases are not that good at some tasks like "indexing a large number of documents, serving pages on high-traffic websites, and delivering streaming media"\cite{anjomshoaa2011cloud}.NoSQL solutions are particularly good at dealing with lots of reading/writing tasks coming in at once, something that tends to slow down SQL/relational databases. Some of NoSQL databases currently being used to manage geospatial data include: MongoDB (open source), BigTable (developed by Google, proprietary, used in Google Earth), Cassandra (developed by Facebook, now open source and maintained by Apache), CouchDB (open source, Apache) and so on. With the growth of scalability of spatial data, NoSQL database may be a good choice.
+
+
+\section{Big Spatial Data Storage And Indexing}
+\subsection{Architecture}
+Figure 1 illustrates the architecture of our distributed vector spatial storage system. The systemis divided into two parts:storage model and index model. The storage model  receives the vector data from original shapefiles\cite{esri1998shapefile}. Then it does two jobs:directly puts these data into the index model;converts these data to WKB type and stores in the HBase table. When the vector data  comes from the index model, according to to our index algorithm, we will calculate the id of  each vector data and puts them into the index table. To search for a range of vector data, the  index  model  will calculate the IDs in the index table which is just in the input range and find these IDs from the data table. Through this secondary index method, we can efficiently make a range search of vector data.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=3in,bb= 0 0 530 491]{arc.jpg}
+  \caption{Architecture of Vector Spatial Data Storage}\label{}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Physical Storage Of  Big Spatial Data}
+
+
+Non-spatial attribute of spatial data
+objects can be accessed by common data types such as string or
+number. But spatial attribute of spatial data cannot be accessed easily
+ because it contains a large number of
+geometric coordinate information.
+
+We try to use a method which compresses spatial
+attribute into a binary large object to store \cite{guting1994introduction}\cite{wang2010research}.We adopt the
+persistent coding rules with the object which have been regulated
+by the OGC and described in their Access and Coordinate.
+Transformation Service Specifications. It is Well Known Text
+(WKT) and. Well Known Binary (WKB). WKT is a text
+markup language for representing vector geometry objects on a
+map, spatial reference systems of geographic objects and
+transformations between spatial reference systems. WKB is
+used to transfer and store the same information in binary bytes.
+For example, if we have a point object with the x coordinate and
+y coordinate value is 1, then the equivalent WKT fotmat is Point(1,1).
+
+\subsection{HBase Storage Model}
+Apache HBase is the Hadoop database, a distributed, scalable, big data store\cite{george2011HBase}.HBase store data in form of a table. Each table consists of rows and columns.
+Each column belongs to a particular column family (Column Family)
+The storage unit in rows and columns as an element, each
+of the elements saves multiple versions of the same data by timestamp marked. Since HBase  store data sparsely, so some
+ columns can be empty, which make it possible to store different kind of vector spatial data\cite{konishetty2012implementation}\cite{vora2011hadoop}.
+
+
+
+A table in HBase consists of a collection of splits, called
+regions, where each region stores a range partition of the
+key space. Its architecture comprises a three layered B+ tree
+structure; the regions storing data constitute the lowest level.
+The two upper levels are special regions referred to as the ROOT
+and META regions. A HBase
+installation consists of a collection of servers, called region
+servers, responsible for serving a subset of regions. Regions
+are dynamically assigned to the region servers; the META table
+maintains a mapping of the region to region servers. If a
+region¡¯s size exceeds a configurable limit, HBase splits it into
+two sub-regions. This allows the system to grow dynamically
+as data is inserted, while dealing with data skew by creating
+finer grained partitions for hot regions.
+
+
+\subsection{Vector Data Storage Model}
+
+HBase has rich data types  and is different from  RDBMSstorage mode, which has only a simple string type and all the types must be dealt with\cite{taylor2010overview}. In this paper. We use OGC recommended for space as a model for processing. Spatial data follows OGC WKB /WKT  standard. WKT through text description geometry object and space reference and WKB through serialized bytes object of description geometry have a higher literacy and storage efficiency. So we use format of spatial data to storage. Mainly,  the WKB contains two kinds of numeric types, including uint32 nodes, which can be used to store number, geometric information such as object type. Double node can be used to store the sit values and other information.
+
+
+Vector spatial data generally includes attribute data, spatial coordinates
+and the topology data\cite{wang2010research}\cite{george2011HBase}. According to the characteristics of the vector spatial data design based on HBase storage  table structure as shown in figure 3,
+ column  in turn  in the column family, geodata is spatial coordinates and some other attribute data, each type of data type is string type and  will be  parsed into the corresponding data type. For example, when we store a point information in the HBase, storage model will find out whether there exists a type of point in column. If so, all point data will be put into the corresponding columns. On the other hand, storage the other hand,storage model will add a new column to store the data.
+ "Row Key" is a vector layer, which is the only ID elements. Attribute data can have multiple rows. Each row represents the vector.
+The coordinate data uses WKB format to store in HBase. The whole table is sparse because different types of spatial data have the different kind of attributes.
+The total algorithm of storing spatial data in  HBase is shown below.
+ \begin{algorithm}[H]
+\caption{Algorithm of Insert Spatial Data in HBase}
+\label{alg1}
+\begin{algorithmic}
+
+\REQUIRE Input:Several shapefiles ;Output:insertion state
+\STATE Step 1) Retrieve the vector data from shapefiles and put them into a special array.
+\STATE Step 2) Convert the spatial information into WKB format.
+\STATE Step 3) Record the type of  vector data and store them into different column family in  HBase.
+\STATE Step 4) Output the  HBase return information.
+
+
+\end{algorithmic}
+\end{algorithm}
+
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=3in,bb=0 0 488 369]{data.jpg}
+  \caption{Table structure of vector data}\label{}
+\end{figure}
+
+
+
+
+
+
+
+
+
+\subsection{Vector Data Index}
+In order to improve the efficiency of spatial query, we need to
+construct a spatial index. At present, there are many spatial index algorithms\cite{guttman1984r}\cite{han2012three}.
+This paper mainly adopts the grid spatial index method.
+
+ 1)Algorithm of Index
+
+We divide the global scope of longitude and latitude into different levels of the grid, as shown in figure 4 and 5 are two different levels of the grid partition method. They respectively show the mesing length of 1 degree and meshing length of 0.1 degree. Each of the partition granularities corresponds to a kind of level. So we can get each grid number by dividing. The rules of grid numbers are as follows: the grid center coordinates + grid level. For example, 11.50\_23.00\_2 can uniquely identify a grid, the grid center coordinates (121.50, 121.50), the level of grid of 2. Coordinate values in the serial number use the same precision and digits.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=2.5in,bb=0 0 226 181]{a.jpg}
+  \caption{Mesing Length of 1 Degree}\label{}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=2.5in,bb=0 0 226 187]{b.jpg}
+  \caption{Mesing Length of 0.1 Degree}\label{}
+\end{figure}
+For vector data records, we should   find out the minimum grid which can  fully include the vector object, which means that we should  find out the most accurate description for the vector object to coordinate grid. The vector data records  described by vector object scope of label is the serial number of the grid. Vector objects such as POINT (47.6245, 47.6245), the most accurate description of vector objects coordinates range of grid side length is 0.1 degrees(if the side length of 0.1 degrees is the smallest partition granularity) respectively the  diagonal coordinates is (47.60, 47.60) and (47.70, 47.70) of the grid, then we mark the vector object POINT (47.6245, 47.6245) in the range of numbers 47.55\_123.05\_4. For other vector objects,  we can use the same method to calculate space range number.So, we can build an index table to fully correspond to the spatial data model.
+
+
+The total algorithm of calculating accurate description for the vector object to coordinate grid is shown below.
+
+
+
+
+
+
+
+ \begin{algorithm}[H]
+\caption{Algorithm of Caculate the Grid Level of Spatial Object}
+\label{alg1}
+\begin{algorithmic}
+
+\REQUIRE Input: One kind of vector spatial data $s$ with the type of WKT;Output:The id of vector spatial data (point,level)
+\STATE Step 1) Process the data $s$ and find out if it is a Point.If it is a Point make it level of 4 and output (point,level)
+\STATE Step 2)Traverse all coordinates to identify the smallest longitude dot note it x\_min,as the same way find out the smallest latitude y\_min,biggest longitude x\_max and latitude y\_max.
+\STATE Step 3)Find a point  which is to 0.5 or 0.0 at the end of decimal and is nearest to the point of $(\frac{x\_min+x\_max}{2},\frac{y\_min+y\_max}{2})$.
+\STATE Step 4)Caculate the maximum of y\_max-y\_min,x\_max-x\_min to identify the level of the grid.
+\STATE Step 5)Output (point,level).
+
+
+
+\end{algorithmic}
+\end{algorithm}
+
+2)Index Table Architecture
+
+We build another table in HBase database as shown in figure 6, which  has a column cluster and develops the  index number within the vector object range. We use the  vector data record ID as HBase database rows of keys (RowKey).The column has a value of 0 to a plurality of vector data records of the id, individual id separated by semicolons. The table level identifier for each vector data  lines keys (RowKey). So you can quickly check out the latitude and longitude coordinate in a certain range all the vector data record id. Then we can get the vector data recorded by ID, according to the ID in the First Data table quickly after the vector data record.
+ In the table fida1, fida2 are all vector data record id.
+Other property fields as columns for the vector number according to the records stored in the column below, the field name is  the column name.
+Because HBase uses  B + tree sort storage method on the line key (RowKey)\cite{george2011HBase},which is so convenient  that you can query all vector objects that belong to a grid of the vector, and  it can  greatly accelerate the  speed of geographical location range query.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=3in,bb= 0 0 469 297]{index.jpg}
+  \caption{Table Structure of Vector Index}\label{}
+\end{figure}
+
+3)Range Query Method
+
+In order to make a range query of spatial data, we need to conform the input data from an array of grid IDs so the HBase can identify. In fact, searching fact,searching spatial data in a range of rectangles is quite easy. The total algorithm is shown below.
+ \begin{algorithm}[H]
+\caption{Algorithm of Query a Range of Vector Spatial Data}
+\label{alg1}
+\begin{algorithmic}
+
+\REQUIRE Input: Rectangular angular coordinate value $x_1$,$y_1$,$x_2$,$y_2$; Output: Array of vector spatial data
+\STATE Step 1) Calculate the rectangular's side and find out whether it is in a meshing grid.If so,caculate the grid id and go to step 3
+\STATE Step 2) Calculating:
+let $s=x_1$,$t=y_1$
+	\WHILE {$s \leq x_2$}
+	\STATE a)Traverse all longitude with the length of 0.5
+		\WHILE {$t \leq y_2$}
+		\STATE a1)Traverse all latitude with the length of 0.5
+		\STATE a2)Put the point into a array
+		\ENDWHILE
+	
+\STATE  Step 3)Find the grid id in the index table and get the corresponding spatial data from data table.
+\STATE  Step 4)Output the spatial data.
+\ENDWHILE
+
+
+\end{algorithmic}
+\end{algorithm}
+
+
+
+
+
+
+\section{Experiment Evolution}
+\subsection{Test Environment And Data}
+We use several computers as  hosts, each installs VirtualBox
+virtual machine and have the environment of HDFS and HBase.
+ The configuration is shown
+below. Host: CPU Duo T7700 Memory 4GB operation
+System Windows 7; virtual machine: the operating systems are UbuntuLinux10.1, 1GB of memory, Hadoop-0.20.203, HBase
+-0.90.3. The development environment Eclipse3.6. The test data is from jackpine\cite{ray2011jackpine},which is 1:50000 vector data (about 1. 00GB).
+
+\subsection{Build Vector Spatial Data Index}
+In this article,  we  use GeoTools-2.7.4  to store  the vector data\cite{coyne1995geotool},which is
+a open-source project to read the client's local
+shapefile data, import the data into the table. Total time includes the
+ read and writes time of index procedure.
+\subsection{Vector Spatial  Data Query Test}
+The steps of querying vector data based on the HBaseSpatial are as follows:
+
+(1) Calculate  the IDs of the spatial object according to  the computational grid;
+
+(2) From the different layers of the index table, read the contained grid ID;
+
+ (3) Read different layers of spatial data and attribute data based on the grid ID in the data table;
+
+(4) Write to the local client.
+   Query time includes the computation if grid ID, reading the HBase table,
+the amount of  reading and writing spatial data  to the local file system.
+
+
+\subsection{Performance Of Horizontal HBase Cluster Expansion}
+   As the table shown below which uses the unit of second, with the increase of a number of HBase nodes, the time of creating an index of vector  spatial data storage  is lowing. How ever, after  six nodes the  efficiency is not that clear. Because  HBase divide Region according to the different amount of data (default 256M)\cite{george2011HBase}.A Region is managed by a Region Server. When the amount of data expending, the Region portion  uses different numbers.Only under the condition of  special nodes that can accelerate the most efficient of making index.
+\begin{table}[H]
+\caption{Performance Of Horizontal HBase Cluster Expansion}
+\label{table_example}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Inserting Test(M) & Node 1(s) & Node 5(s) & Node 6(s) & Node 7(s)\\
+\hline
+6M & 3.112	& 2.932	& 2.891& 	2.883
+\\
+\hline
+12M & 20.251& 	19.231	& 18.911	& 18.882
+\\
+\hline
+50M & 131.223& 	109.231& 	93.224	& 92.121
+\\
+\hline
+100M &214.324	& 208.421& 	181.212	& 180.993
+\\
+\hline
+500M & 1231.231& 	1107.122& 	883.231	& 851.823
+\\
+\hline
+1G&2632.234& 	2214.324	& 1753.234	& 1702.214
+
+\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+
+
+\subsection{Comparison Of MySQL and MongoDB}
+We use the same  computers above to  build the MySQL Cluster. MySQL Cluster is a write-scalable, real-time, ACID-compliant transactional database. We use shp2mySQL tool to make shape file become SQL. Then we use these SQL to store them into the MySQL Cluster. We calculate the whole time of inserting data and make server query test just the same as above.
+
+ MongoDB is established in the same environment as above.We use a python script to deal with  shape file and store the  data  to the MongoDB. From then MongoDB can store different kind of spatial data but can only make the index of point data.
+
+The figure below shows the three different kind of spatial data small range query test, which is point data, LingString data and MultiLingString data\cite{cox2002opengis}.The horizontal axis means the data size and uses the  unit of megabytes.The vertical axis means the time of searching  based on  the different kind of storage platform and use the unit of second. Because MongoDB only supports the point data type of the index, so when searching the point, MongoDB performs mostly the same as HBase. With the scale growth of data, MySQL  performs not that fifteenth,when searching the other kind of spatial data such as LineString data and MultiLingString data HBase performs better.
+\par
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=3in,bb= 0 0 285 195]{1.jpg}
+  \caption{Point Data Query Efficiency}\label{}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=3in,bb=0 0 300 198]{2.jpg}
+  \caption{LingString Data Query Efficiency}\label{}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=3in,bb=0 0 319 202]{3.jpg}
+  \caption{MultiLingString Data Query Efficiency}\label{}
+\end{figure}
+\par
+\section{Conclusion}
+
+In this paper, we bring forward HBaseSpatial:a scalable spatial dada storage based on HBase. We design
+and establish the index table and index storage format. Finally, the effectiveness and practicability of this framework are verified comparing with MongDB and MySQL. When we  search complex spatial data,  especially MultiLingString and LingString types, our framework performs better than MongnDB and MySQL. This framework provides effective and efficient distributed storage and parallel processing paradigm for big spatial data.
+
+
+
+
+
+
+
+\bibliography{IEEEexample}
+
+
+\end{document}
+
+

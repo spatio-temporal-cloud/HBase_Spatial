@@ -1,0 +1,214 @@
+\begin{thebibliography}{10}
+
+\bibitem{ali2012crowdits}
+Kashif Ali, Dina Al-Yaseen, Ali Ejaz, Tayyab Javed, and Hossam~S Hassanein.
+\newblock Crowdits: Crowdsourcing in intelligent transportation systems.
+\newblock In {\em Wireless Communications and Networking Conference (WCNC),
+  2012 IEEE}, pages 3307--3311. IEEE, 2012.
+
+\bibitem{anjomshoaa2011cloud}
+Amin Anjomshoaa and A~Min Tjoa.
+\newblock How the cloud computing paradigm could shape the future of enterprise
+  information processing.
+\newblock In {\em Proceedings of the 13th International Conference on
+  Information Integration and Web-based Applications and Services}, pages
+  7--10. ACM, 2011.
+
+\bibitem{bae2012mobis}
+Wan~D Bae, Sada Narayanappa, Shayma Alkobaisi, and Kye~Y Bae.
+\newblock Mobis: a distributed paradigm of mobile sensor data analytics for
+  evaluating environmental exposures.
+\newblock In {\em Proceedings of the First ACM SIGSPATIAL International
+  Workshop on Mobile Geographic Information Systems}, pages 93--96. ACM, 2012.
+
+\bibitem{bai2013spatial}
+Jiun-Wen Bai, Jun-Zhe Wang, and Jiun-Long Huang.
+\newblock Spatial query processing on distributed databases.
+\newblock In {\em Advances in Intelligent Systems and Applications-Volume 1},
+  pages 251--260. Springer, 2013.
+
+\bibitem{balkic2012geohash}
+Zoran Balki{\'c}, Damir {\v{S}}o{\v{s}}tari{\'c}, and Goran Horvat.
+\newblock Geohash and uuid identifier for multi-agent systems.
+\newblock In {\em Agent and Multi-Agent Systems. Technologies and
+  Applications}, pages 290--298. Springer, 2012.
+
+\bibitem{bao2012massive}
+Yuan Bao, Lei Ren, Lin Zhang, Xuesong Zhang, and Yongliang Luo.
+\newblock Massive sensor data management framework in cloud manufacturing based
+  on hadoop.
+\newblock In {\em Industrial Informatics (INDIN), 2012 10th IEEE International
+  Conference on}, pages 397--401. IEEE, 2012.
+
+\bibitem{bartholomew2010SQL}
+Daniel Bartholomew.
+\newblock Sql vs. nosql.
+\newblock {\em Linux Journal}, 2010(195):4, 2010.
+
+\bibitem{blasby2001building}
+David Blasby.
+\newblock Building a spatial database in postgresql.
+\newblock {\em Open Source Database Summit}, 2001.
+
+\bibitem{cattell2011scalable}
+Rick Cattell.
+\newblock Scalable sql and nosql data stores.
+\newblock {\em ACM SIGMOD Record}, 39(4):12--27, 2011.
+
+\bibitem{chodorow2010mongodb}
+Kristina Chodorow and Michael Dirolf.
+\newblock {\em MongoDB: the definitive guide}.
+\newblock O'Reilly Media, 2010.
+
+\bibitem{cox2002opengis}
+Simon Cox, Adrian Cuthbert, Paul Daisey, John Davidson, Sandra Johnson, Edric
+  Keighan, Ron Lake, Marwa Mabrouk, Serge Margoulies, Richard Martell, et~al.
+\newblock Opengis{\textregistered} geography markup language (gml)
+  implementation specification, version.
+\newblock 2002.
+
+\bibitem{coyne1995geotool}
+John~M Coyne and Ivan Henson.
+\newblock Geotool sourcebook: User's manual.
+\newblock Technical report, DTIC Document, 1995.
+
+\bibitem{esri1998shapefile}
+ESRI ESRI.
+\newblock Shapefile technical description. esri.
+\newblock {\em INC, http://www. esri. com}, 1998.
+
+\bibitem{george2011HBase}
+Lars George.
+\newblock {\em HBase: the definitive guide}.
+\newblock O'Reilly Media, Incorporated, 2011.
+
+\bibitem{gould2001ogc}
+Michael Gould and Louis Hecht~Jr.
+\newblock Ogc: A framework for geospatial and statistical information
+  integration.
+\newblock {\em Joint UNECE/Eurostat Work Session on Methodological Issues.
+  Tallinn, Estonia}, 2001.
+
+\bibitem{guting1994introduction}
+Ralf~Hartmut G{\"u}ting.
+\newblock An introduction to spatial database systems.
+\newblock {\em The VLDB Journal¡ªThe International Journal on Very Large Data
+  Bases}, 3(4):357--399, 1994.
+
+\bibitem{guttman1984r}
+Antonin Guttman.
+\newblock {\em R-trees: a dynamic index structure for spatial searching},
+  volume~14.
+\newblock ACM, 1984.
+
+\bibitem{han2012three}
+Dan Han and Eleni Stroulia.
+\newblock A three-dimensional data model in hbase for large time-series dataset
+  analysis.
+\newblock In {\em Maintenance and Evolution of Service-Oriented and Cloud-Based
+  Systems (MESOCA), 2012 IEEE 6th International Workshop on the}, pages 47--56.
+  IEEE, 2012.
+
+\bibitem{konishetty2012implementation}
+Vamshi~Krishna Konishetty, K~Arun Kumar, Kaladhar Voruganti, and GV~Rao.
+\newblock Implementation and evaluation of scalable data structure over hbase.
+\newblock In {\em Proceedings of the International Conference on Advances in
+  Computing, Communications and Informatics}, pages 1010--1018. ACM, 2012.
+
+\bibitem{li2013mhb}
+Yan Li, GyoungBae Kim, LongRi Wen, and HaeYoung Bae.
+\newblock Mhb-tree: A distributed spatial index method for document based nosql
+  database system.
+\newblock In {\em Ubiquitous Information Technologies and Applications}, pages
+  489--497. Springer, 2013.
+
+\bibitem{ma2012efficient}
+Youzhong Ma, Jia Rao, Weisong Hu, Xiaofeng Meng, Xu~Han, Yu~Zhang, Yunpeng
+  Chai, and Chunqiu Liu.
+\newblock An efficient index for massive iot data in cloud environment.
+\newblock In {\em Proceedings of the 21st ACM international conference on
+  Information and knowledge management}, pages 2129--2133. ACM, 2012.
+
+\bibitem{mingbo2004analysis}
+Zhang Mingbo, Shen Paiwei, Lu~Feng, and Cheng Changxiu.
+\newblock Analysis and discussion on spatial data engine technologies.
+\newblock {\em Geo-information Science}, 6:80--84, 2004.
+
+\bibitem{momjian2001postgreSQL}
+Bruce Momjian.
+\newblock {\em PostgreSQL: introduction and concepts}, volume 192.
+\newblock Addison-Wesley, 2001.
+
+\bibitem{nishimura2011md}
+Shoji Nishimura, Sudipto Das, Divyakant Agrawal, and Amr~El Abbadi.
+\newblock Md-hbase: a scalable multi-dimensional data infrastructure for
+  location aware services.
+\newblock In {\em Mobile Data Management (MDM), 2011 12th IEEE International
+  Conference on}, volume~1, pages 7--16. IEEE, 2011.
+
+\bibitem{obe2011postgis}
+Regina Obe and Leo Hsu.
+\newblock {\em PostGIS in action}.
+\newblock Manning Publications Co., 2011.
+
+\bibitem{ray2011jackpine}
+Suprio Ray, Bogdan Simion, and Angela~Demke Brown.
+\newblock Jackpine: A benchmark to evaluate spatial database performance.
+\newblock In {\em Data Engineering (ICDE), 2011 IEEE 27th International
+  Conference on}, pages 1139--1150. IEEE, 2011.
+
+\bibitem{strauch2011NoSQL}
+Christof Strauch, Ultra-Large~Scale Sites, and Walter Kriha.
+\newblock Nosql databases.
+\newblock {\em URL: http://www. christof-strauch. de/nosqldbs. pdf (§Õ§Ñ§ä§Ñ
+  §à§Ò§â§Ñ§ë§Ö§ß§Ú§ñ 07.11. 2012)}, 2011.
+
+\bibitem{tan2012clost}
+Haoyu Tan, Wuman Luo, and Lionel~M Ni.
+\newblock Clost: a hadoop-based storage system for big spatio-temporal data
+  analytics.
+\newblock In {\em Proceedings of the 21st ACM international conference on
+  Information and knowledge management}, pages 2139--2143. ACM, 2012.
+
+\bibitem{taylor2010overview}
+Ronald~C Taylor.
+\newblock An overview of the hadoop/mapreduce/hbase framework and its current
+  applications in bioinformatics.
+\newblock {\em BMC bioinformatics}, 11(Suppl 12):S1, 2010.
+
+\bibitem{vora2011hadoop}
+Mehul~Nalin Vora.
+\newblock Hadoop-hbase for large-scale data.
+\newblock In {\em Computer Science and Network Technology (ICCSNT), 2011
+  International Conference on}, volume~1, pages 601--605. IEEE, 2011.
+
+\bibitem{wang2010research}
+Yonggang Wang and Sheng Wang.
+\newblock Research and implementation on spatial data storage and operation
+  based on hadoop platform.
+\newblock In {\em Geoscience and Remote Sensing (IITA-GRS), 2010 Second IITA
+  International Conference on}, volume~2, pages 275--278. IEEE, 2010.
+
+\bibitem{zhong2012distributed}
+Yunqin Zhong, Jizhong Han, Tieying Zhang, and Jinyun Fang.
+\newblock A distributed geospatial data storage and processing framework for
+  large-scale webgis.
+\newblock In {\em Geoinformatics (GEOINFORMATICS), 2012 20th International
+  Conference on}, pages 1--7. IEEE, 2012.
+
+\bibitem{zhong2012towards}
+Yunqin Zhong, Jizhong Han, Tieying Zhang, Zhenhua Li, Jinyun Fang, and Guihai
+  Chen.
+\newblock Towards parallel spatial query processing for big spatial data.
+\newblock In {\em Parallel and Distributed Processing Symposium Workshops \&
+  PhD Forum (IPDPSW), 2012 IEEE 26th International}, pages 2085--2094. IEEE,
+  2012.
+
+\bibitem{zhong2012elastic}
+Yunqin Zhong, Xiaomin Zhu, and Jinyun Fang.
+\newblock Elastic and effective spatio-temporal query processing scheme on
+  hadoop.
+\newblock In {\em Proceedings of the 1st ACM SIGSPATIAL International Workshop
+  on Analytics for Big Geospatial Data}, pages 33--42. ACM, 2012.
+
+\end{thebibliography}

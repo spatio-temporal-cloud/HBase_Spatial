@@ -1,0 +1,480 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.28)  23 JUN 2013 02:21
+entering extended mode
+**C:/Users/lenovo/Desktop/Hbase/æ¨¡ç‰ˆ/Hbase/bare_conf.tex
+(C:/Users/lenovo/Desktop/Hbase/æ¨¡ç‰ˆ/Hbase/bare_conf.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(C:\Users\lenovo\Desktop\Hbase\æ¨¡ç‰ˆ\Hbase\IEEEtran.cls
+Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 373.
+
+("F:\Program Files\latex\MiKTeX\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen104
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen105
+\CLASSINFOnormalsizeunitybaselineskip=\dimen106
+\IEEEnormaljot=\dimen107
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+\IEEEilabelindentA=\dimen108
+\IEEEilabelindentB=\dimen109
+\IEEEilabelindent=\dimen110
+\IEEEelabelindent=\dimen111
+\IEEEdlabelindent=\dimen112
+\IEEElabelindent=\dimen113
+\IEEEiednormlabelsep=\dimen114
+\IEEEiedmathlabelsep=\dimen115
+\IEEEiedtopsep=\skip41
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@IEEEsubequation=\count85
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count86
+\c@table=\count87
+\@IEEEeqnnumcols=\count88
+\@IEEEeqncolcnt=\count89
+\@IEEEtmpitemindent=\dimen116
+\c@IEEEbiography=\count90
+\@IEEEtranrubishbin=\box26
+) ("F:\Program Files\latex\MiKTeX\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen117
+\lightrulewidth=\dimen118
+\cmidrulewidth=\dimen119
+\belowrulesep=\dimen120
+\belowbottomsep=\dimen121
+\aboverulesep=\dimen122
+\abovetopsep=\dimen123
+\cmidrulesep=\dimen124
+\cmidrulekern=\dimen125
+\defaultaddspace=\dimen126
+\@cmidla=\count91
+\@cmidlb=\count92
+\@aboverulesep=\dimen127
+\@belowrulesep=\dimen128
+\@thisruleclass=\count93
+\@lastruleclass=\count94
+\@thisrulewidth=\dimen129
+)
+("F:\Program Files\latex\MiKTeX\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen130
+)
+("F:\Program Files\latex\MiKTeX\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+("F:\Program Files\latex\MiKTeX\tex\latex\algorithms\algorithmic.sty"
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+("F:\Program Files\latex\MiKTeX\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("F:\Program Files\latex\MiKTeX\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+\c@ALC@unique=\count95
+\c@ALC@line=\count96
+\c@ALC@rem=\count97
+\c@ALC@depth=\count98
+\ALC@tlm=\skip44
+\algorithmicindent=\skip45
+)
+("F:\Program Files\latex\MiKTeX\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen131
+\extrarowheight=\dimen132
+\NC@list=\toks16
+\extratabsurround=\skip46
+\backup@length=\skip47
+)
+("F:\Program Files\latex\MiKTeX\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+("F:\Program Files\latex\MiKTeX\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("F:\Program Files\latex\MiKTeX\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("F:\Program Files\latex\MiKTeX\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("F:\Program Files\latex\MiKTeX\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("F:\Program Files\latex\MiKTeX\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("F:\Program Files\latex\MiKTeX\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("F:\Program Files\latex\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count99
+))
+\Gin@req@height=\dimen133
+\Gin@req@width=\dimen134
+)
+("F:\Program Files\latex\MiKTeX\tex\latex\algorithms\algorithm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("F:\Program Files\latex\MiKTeX\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count100
+\float@exts=\toks17
+\float@box=\box27
+\@float@everytoks=\toks18
+\@floatcapt=\box28
+)
+\@float@every@algorithm=\toks19
+\c@algorithm=\count101
+)
+(C:\Users\lenovo\Desktop\Hbase\æ¨¡ç‰ˆ\Hbase\bare_conf.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `alg1' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `alg1' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+ ("F:\Program Files\latex\MiKTeX\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count102
+\scratchdimen=\dimen135
+\scratchbox=\box29
+\nofMPsegments=\count103
+\nofMParguments=\count104
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count105
+\MPscratchDim=\dimen136
+\MPnumerator=\count106
+\makeMPintoPDFobject=\count107
+\everyMPtoPDFconversion=\toks21
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 304.
+ [1{F:/Program Files/latex/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.
+sfd}}
+
+
+]
+Missing character: There is no ¨ in font ptmr7t!
+Missing character: There is no ¨ in font ptmr7t!
+ [2]
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 430.
+
+<arc.jpg, id=12, 554.07pt x 513.41812pt>
+File: arc.jpg Graphic file (type jpg)
+ <use arc.jpg>
+Package pdftex.def Info: arc.jpg used on input line 430.
+(pdftex.def)             Requested size: 216.81pt x 200.85596pt.
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no ¯ in font ptmr7t!
+ [3 <C:/Users/lenovo/Desktop/Hbase/æ¨¡ç‰ˆ/Hbase/arc.jpg>]
+Underfull \hbox (badness 3138) in paragraph at lines 495--496
+[]\OT1/ptm/m/n/10 HBase has rich da-ta type-s and is d-if-fer-en-t from
+ []
+
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 523.
+
+<data.jpg, id=16, 510.40688pt x 385.44pt>
+File: data.jpg Graphic file (type jpg)
+ <use data.jpg>
+Package pdftex.def Info: data.jpg used on input line 523.
+(pdftex.def)             Requested size: 216.81pt x 163.93617pt.
+
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 546.
+
+<a.jpg, id=17, 236.38312pt x 189.70876pt>
+File: a.jpg Graphic file (type jpg)
+ <use a.jpg>
+Package pdftex.def Info: a.jpg used on input line 546.
+(pdftex.def)             Requested size: 180.67499pt x 144.7004pt.
+
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 551.
+
+<b.jpg, id=18, 236.38312pt x 195.73125pt>
+File: b.jpg Graphic file (type jpg)
+ <use b.jpg>
+Package pdftex.def Info: b.jpg used on input line 551.
+(pdftex.def)             Requested size: 180.67499pt x 149.4971pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <C:/Users/lenovo/Desktop/Hbase/æ¨¡ç‰ˆ/Hbase/data.jpg> <C:/Users/lenovo/Desk
+top/Hbase/æ¨¡ç‰ˆ/Hbase/a.jpg>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 570.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 570.
+
+Underfull \hbox (badness 3701) in paragraph at lines 573--574
+[] []\OT1/ptm/m/n/10 Step 3)Find a point which is to 0.5 or 0.0 at
+ []
+
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 592.
+
+<index.jpg, id=22, 490.08093pt x 310.15875pt>
+File: index.jpg Graphic file (type jpg)
+ <use index.jpg>
+Package pdftex.def Info: index.jpg used on input line 592.
+(pdftex.def)             Requested size: 216.81pt x 137.29807pt.
+
+Underfull \hbox (badness 4595) in paragraph at lines 604--605
+[] []\OT1/ptm/m/n/10 Input: Rect-an-gu-lar an-gu-lar co-or-di-nate val-ue
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <C:/Users/lenovo/Desktop/Hbase/æ¨¡ç‰ˆ/Hbase/b.jpg> <C:/Users/lenovo/Desktop
+/Hbase/æ¨¡ç‰ˆ/Hbase/index.jpg>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 662.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 662.
+
+Overfull \hbox (5.65547pt too wide) in paragraph at lines 662--686
+ [] 
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 694--695
+\OT1/ptm/m/n/10 Clus-ter. MySQL Clus-ter is a write-scalable, real-time,
+ []
+
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 702.
+
+<1.jpg, id=30, 298.11375pt x 204.01219pt>
+File: 1.jpg Graphic file (type jpg)
+ <use 1.jpg>
+Package pdftex.def Info: 1.jpg used on input line 702.
+(pdftex.def)             Requested size: 216.81pt x 148.3455pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 708.
+
+<2.jpg, id=35, 313.17pt x 207.02344pt>
+File: 2.jpg Graphic file (type jpg)
+ <use 2.jpg>
+Package pdftex.def Info: 2.jpg used on input line 708.
+(pdftex.def)             Requested size: 216.81pt x 143.0918pt.
+
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 714.
+
+<3.jpg, id=36, 333.49594pt x 211.54031pt>
+File: 3.jpg Graphic file (type jpg)
+ <use 3.jpg>
+Package pdftex.def Info: 3.jpg used on input line 714.
+(pdftex.def)             Requested size: 216.81pt x 137.29196pt.
+
+(C:\Users\lenovo\Desktop\Hbase\æ¨¡ç‰ˆ\Hbase\bare_conf.bbl
+Underfull \hbox (badness 1424) in paragraph at lines 44--47
+[]\OT1/ptm/m/n/9 Daniel Bartholomew.  Sql vs. nosql.  \OT1/ptm/m/it/9 Lin-ux Jo
+ur-nal\OT1/ptm/m/n/9 ,
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 66.
+("F:\Program Files\latex\MiKTeX\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 66.
+ [7 <C:/Users/lenovo/Desktop/Hbase/æ¨¡ç‰ˆ/Hbase/1.jpg> <C:/Users/lenovo/Desktop
+/Hbase/æ¨¡ç‰ˆ/Hbase/2.jpg> <C:/Users/lenovo/Desktop/Hbase/æ¨¡ç‰ˆ/Hbase/3.jpg>]
+Missing character: There is no ¡ in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no Õ in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no Ñ in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no ä in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no Ñ in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no à in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no Ò in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no â in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no Ñ in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no ë in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no Ö in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no ß in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no Ú in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no ñ in font ptmri7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--178
+[]\OT1/ptm/m/n/9 Ronald C Tay-lor.  An overview of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--178
+\OT1/ptm/m/n/9 hadoop/mapreduce/hbase frame-work and it-s cur-ren-t
+ []
+
+
+Underfull \hbox (badness 5231) in paragraph at lines 174--178
+\OT1/ptm/m/n/9 ap-pli-ca-tion-s in bioin-for-mat-ic-s.  \OT1/ptm/m/it/9 BM-C bi
+oin-for-mat-ic-s\OT1/ptm/m/n/9 ,
+ []
+
+)
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[8] (C:\Users\lenovo\Desktop\Hbase\æ¨¡ç‰ˆ\Hbase\bare_conf.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2485 strings out of 495354
+ 37065 string characters out of 3183019
+ 94898 words of memory out of 3000000
+ 5632 multiletter control sequences out of 15000+200000
+ 41842 words of font info for 78 fonts, out of 3000000 for 9000
+ 17 hyphenation exceptions out of 8191
+ 27i,8n,19p,1202b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
+{F:/Program Files/latex/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<F:/Program Fi
+les/latex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><F:/Program Files/la
+tex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><F:/Program Files/latex/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><F:/Program Files/latex/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb><F:/Program Files/latex/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb><F:/Program Files/latex/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmsy9.pfb><F:/Program Files/latex/MiKTeX/fonts/type1/urw/times/ut
+mb8a.pfb><F:/Program Files/latex/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><F:/P
+rogram Files/latex/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><F:/Program Files/la
+tex/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (8 pages, 477659 bytes).
+PDF statistics:
+ 78 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,643 @@
+%  LaTeX support: e-mail latex@mdpi.com
+%
+%  In case you need support, please attach any log files that you could
+%  have, and specify the details of your LaTeX setup (which operating
+%  system and LaTeX version / tools you are using).
+%==========================================================
+% LaTeX Class File and Rendering Mode (choose one)
+%----------------------------------------------------------
+% you will need to save "mdpi.cls" and "mdpi.bst" files
+% into the same folder as the this template file.
+%----------------------------------------------------------
+\documentclass[journal,article,submit,moreauthors,pdftex,12pt,a4paper]{mdpi} % for use with pdfLaTeX only
+%\documentclass[journal,article,submit,moreauthors,dvipdfm,12pt,a4paper]{mdpi} % if eps figure are used, use this line with LaTeX and dvi2pdf only
+%=================================================================
+% Class Options
+%-----------------------------------------------------------------
+%As first class option the journal should be set. Choose between:
+%administrativesciences, algorithms, atmosphere, cancers, challenges, diversity, energies, entropy, forests, futureinternet, games, genes, information, ijerph, ijfs, ijms, jfb, jlpea, marinedrugs, materials, micromachines, molbank,  molecules, nutrients, pharmaceuticals, pharmaceutics , polymers, religions, remotesensing, sensors, sustainability, symmetry, toxins, viruses, water
+%
+%-----------------------------------------------------------------
+% The default type of manuscript is article, but could be replaced
+% by using one of the class options:
+% article, review, communication, commentary, letter, bookreview,
+% correction, addendum, editorial.
+%-----------------------------------------------------------------
+% If there is only one author the class opting oneauthor should be
+% used. Otherwise use the class option moreauthors .
+%-----------------------------------------------------------------
+% The class option submit will be changed to accept by the Editorial
+% Office when the paper is accepted.
+% This will only make changes to the frontpage, the headings and
+% the copyright information
+% Journal Info and Pagination for Accepted Papers will also be
+% assigned by the Editorial
+%-----------------------------------------------------------------
+\setcounter{page}{1}
+\lastpage{x}
+\doinum{10.3390/------}
+\pubvolume{xx}
+\pubyear{2012}
+\history{Received: xx / Accepted: xx / Published: xx}
+
+%-----------------------------------------------------------------
+% The following line should be uncommented if the LaTeX file
+% is uploaded to arXiv.org
+%\pdfoutput=1
+%=================================================================
+%=================================================================
+% Add packages and commands to include here
+% The hyperref, caption, float and color packages are already included
+%-----------------------------------------------------------------
+%\usepackage{amssymb,amsmath}
+%\usepackage{graphicx}
+%\usepackage{subfigure,psfig}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{epstopdf}
+\usepackage{enumerate}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{amsmath}
+%-----------------------------------------------------------------
+% Full title of the paper (Capitalized)
+\Title{Sample Entropy based Extreme Learning Machine for Big Data Analysis}
+
+% Authors (add full first names)
+\Author{Chen Jiaoyan $^{1}$, Chen Huajun $^{1, \star}$, Zheng Guozhou $^{1}$, Xi Chen $^{1}$}
+
+% Affiliations / Addresses, add [1] after \address if there is only one affiliation
+\address{%
+$^{1}$ Colledge of Computer Science, Zhejiang University, Yugu Road, Hangzhou, China
+}
+
+%Contact information of the corresponding author, add [2] after \corres if there are more than one corresponding author
+\corres{huajunsir@zju.edu.cn}
+
+% Abstract
+\abstract{
+Recently, big data analysis is needed in various fields as large data sets are generated.
+Traditional machine learning methods on single machine face the problems of low efficiency, over-fitting, out-of-memory when sample set is large.
+Extreme Learning Machine (ELM) is a learning algorithm for single hidden layer feed-forward neural networks (SLFNs) with high generalization performance and fast training speed.
+And ELM ensemble can further improve predicting stability and accuracy.
+In the paper, sample entropy is utilized and a novel ELM ensemble method called EC-ELM is proposed for higher performance in big data learning.
+To deal with iterative training of multiple ELM networks with large data set, sample entropy is adopted as criterion for resampleing.
+And sample entropy also acts as a key role in accurately calculating the weights of each classifier for result combination.
+Moreover, the procedure of training is accelerated by MapReduce distributed computing framework for higher efficiency and scabability.
+In our experiments, EC-ELM achieves higher generalization performance than single ELM and voting based ELM ensemble method when tested on several classific sample sets.
+In resampling, only a small protion of the large sample set are needed for each ELM network's training and this helps solve out-of-memory problem.
+When accelerated by hadoop cluster, EC-ELM shows high speedup and sizeup in big data leaning.
+}
+
+% Keywords: add 3 to 10 keywords
+\keyword{Big Data; MapReduce; Hadoop; Entropy; Extreme Learning Machine; Ensemble;}
+
+% the fields PACS and MSC may be left empty or commented out if not applicable
+%\PACS{}
+%\MSC{}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+Today, large volume datasets are generated in various fields, such as internet, sensor networks, business, social network and so on.
+In face of complex and large data, traditional data analysis methods suffer from many problems.
+Present machine learn algorithms may lead to low generalization performance when training data set is very large.
+To train with a large sample set, the model used in machine learning will be so complex that they cause low efficiency, over-fitting, out-of-memory and so on.
+Moreover, most traditional machine learn methods are designed for single machine, they face the problems of low scalability and more processing time when training data is large and complex.
+\par
+To solve the above problems in big data analysis, a distributed big data analysis method called EC-ELM is proposed in our paper.
+In EC-ELM, a novel machine leaning method called ELM\cite{Huang2006} and theory of information entropy\cite{Shannon2001} are integrated and applied.
+To overcover out-of-memory, low stability and accuracy in big data leaning, multiple neural networks are trained iteratively on sample subset and their prediction results are combined.
+Sample entropy is utilized for resampling in each neural network training and weights calculation of each neural network in result combination.
+Moreover, the sample entropy based big data learning algroithm can be easily parallelized on hadoop cluster for higher efficiency and scabability.
+\par
+Extreme learning machine (ELM)\cite{Huang2006} is a newly proposed learning algorithm for single hidden layer feedforward networks (SLFNs) with the capabilities of approximation and multiclass classification.
+Compared to the traditional learning methods, such as SVM and BP neural network, it has better generalization performance and faster training speed.
+Although ELM may suffer from the problems of over-fitting and instability, especially on large datasets, neural network ensemble\cite{Hansen1990} algorithms can help solve the problems\cite{Cao2012}\cite{Liu2010}.
+The adoption of ELM ensemble in EC-ELM helps improve big data leaning efficiency and generalization performance.
+In EC-ELM, multiple results predicted by iteratively trained ELM neural networks are combined.
+As the prediction error averages out, the final result become more accurate and stable.
+\par
+The concept of entropy in information theory is introduced by Shannon to quantify unpredictability of a random variable\cite{Shannon2001}.
+In EC-ELM, sample entropy plays a key role in resampling and result combination.
+To acquire enough entropy of the large sample set, a set of ELM neural networks are trained and used for prediction parallelly in each iteractive step.
+The sample with higher entropy contains more informantion and is more representitive.
+Therefore, EC-ELM iteratively calculates sample entropy, resamples, trains neural network set and predicts.
+Our experiment proves that only a small proportion of the large sample set are adopted in resampling procedure to achieve high generalization performance.
+In classifier combination, the entropy of each sample with respect to specific classifier can be used for weighted result combination\cite{Zhai2012}.
+The weights of all the prediction results are calculated according to the sample's entropy in EC-ELM.
+Totally, the application of sample entropy greatly improves EC-ELM' generalization performance and helps solve out-of-memory problem in big data leaning with memory limited machines.
+\par
+In big data processing, cloud computing provides a good solution to the problems of efficiency and scalability.
+Parallel programming model MapReduce\cite{Dean2008} has been used for some simple ensemble algorithm like Bagging.
+In each iteraction learning step of EC-ELM, multiple sample subsets are generated and each of them trains an ELM classifier individually.
+The procedure is implemented in Map procedure and parallelized on multiple slave nodes.
+In Reduce procedure, the prediction properties to specific label and sample entropy are calculated.
+\par
+Totally, EC-ELM has the advantages of higher generalization performance, efficiency, scalabiliby and less complex single network in big data training:
+\begin{enumerate}[(i)]
+\item First, higher generalization performance.
+EC-ELM overcomes single ELM's problems of instability and over-fitting in big data leaning.
+The novel sample entropy based ELM ensemble algorithm leads to higher testing accuracy and stability than tradition ELM ensemble methods.
+\item Second, less complex single network.
+With sample entropy based resampling method, only part of the whole sample set are needed for each ELM's training.
+This greatly reduces hidden node number of each ELM and solves out-of-memory problem.
+\item Third, higher efficiency and scalability in big data training.
+The training algorithm is accelerated by MapReduce parallel computing framework.
+It shows high speedup and sizeup on hadoop cluster.
+\end{enumerate}
+\par
+
+The remaining of this paper is organized as follows.
+Sect. 2 briefly introduces ELM and MapReduce distributed programming model.
+In sect. 3, we describe the related work, including parallel ensemble learning algorithms and ELM ensemble method.
+In Sect. 4, we give the detail information of our entropy based ELM ensemble classifier on cloud infrastructure.
+Sect. 5 introduces the experiments and the result analysis.
+Sect. 6 gives conclusion.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Background}
+\subsection{Extreme Learning Machine}
+
+ELM is a novel learning algorithm for single hidden layer feedforward neural networks (SLFNs) with the capabilities of interpolation and universal approximation\cite{Huang2006}\cite{Huang2004}.
+Assume a sample set $\left\{ \left( x_i,t_i \right) | x_i \in R^n,t_i \in R^m, i = 1,2,\dots,N  \right\}$ is used for ELM training.
+And the expected output of each sample is represented by a matrix:
+\begin{equation}
+T = \begin{bmatrix}t_1^T \\ \vdots \\ t_N^T \end{bmatrix}_{N \times m}
+\end{equation}
+Given specific hidden node number $M$ and activation function $g$, the algorithm randomly determines input weights $w_j$ and biases of $M$ hidden nodes, $j=1,2,\dots,M$.
+According to input weights and hidden node biases, hidden layer output matrix $H$ can be calculated as shown in the following formula.
+\begin{equation}
+H =
+\begin{bmatrix}
+G(w_1, b_1, x_1) & \cdots & G(w_M, b_M, x_1) \\
+\vdots & \ddots & \vdots \\
+G(w_1, b_1, x_N) & \cdots & G(w_M, b_M, x_N)
+\end{bmatrix}_{N \times M}
+\end{equation}
+For additive nodes in hidden layer of SLFN,
+\begin{equation}
+G(w_i,b_i,x)=g(w_i \cdot x + b_i)
+\end{equation}
+For RBF nodes in hidden layer of SLFN,
+\begin{equation}
+G(w_i,b_i,x)=g(b_i||x-a_i||)
+\end{equation}
+To train an SLFN is to find a least-squares solution $\hat{\beta}$ of the linear system $H \beta=T$:
+\begin{equation}
+||H\hat{\beta}-T|| = min || H\beta-T ||
+\end{equation}
+The solution is:
+\begin{equation}
+\hat{\beta} = H^\dagger T
+\end{equation}
+where $H^\dagger$ is the Moore-penrose generalized inverse of matrix $H$,
+\begin{equation}
+\hat{\beta} = \begin{bmatrix}\beta_i^T \\ \vdots \\ \beta_M^T \end{bmatrix}_{M \times m}
+\end{equation}
+\par
+ELM is able to solve multiclass classification problem through decomposing multiclass classification problem to a multioutput regression problem using One-Against-All method.
+Huang et al.\cite{Huang2006} have shown that ELM provides good generalization performance and extremely fast training speed when it is applied in a few artificial and real benchmark function approximation and classification problems including very large complex applications.
+Moreover, ELM has been applied in many real applications, such as face recognition\cite{Mohammed2011}, protein sequence classification\cite{Wang2005} and signal processing\cite{LIANG2006}.
+\par
+However, single ELM network faces the problems of instability, over-fitting and out of memory, especially on large training sample set.
+They are caused by ramdomly selection of input weights, hidden layer biases, too much hidden nodes as well as complex and large training instance set.
+\par
+\subsection{MapReduce: Distributed Programming Model}
+
+MapReduce\cite{Dean2008} is a popular parallel programming model for large scale data processing on commodity computer cluster.
+Through implementation of a Map function and a Reduce function, the programmer can easily run the program on distributed cluster without knowning details for parallization.
+The data centered idea of moving computations to data makes it more efficient and convenient in many large data processing applications.
+MapReduce is widely applied in big data processing applictions whose dataflow takes the form of a directed acyclic graph of operators.
+\par
+In the whole MapReduce distributed programming framework, Map and Reduce are the two most important procedures.
+The framework firstly partitions input files into parts and each of them are allocated to slave nodes.
+In Map procedure, each Map process executes with allocated input data and outputs a set of intermediate key/value pairs.
+After Map proceduer, the intermediate results are relocated to slave nodes for Reduce procedure.
+In Reduce procedure, all the values that share the same key are processed in the same Reduce process.
+Each Reduce process outputs final results to distributed file system directly.
+Both Map procedure and Reduce procedure can be highly parallelized on the cluster nodes automatically.
+\par
+Hadoop\cite{a} is the open-source implementation of MapReduce parallel computing framework.
+It provides reliable, scalable, distributed computing and is designed to scale up from several servers to large scale commerical machines constructed cluster.
+Except for software library for MapReduce parallel programming, it also implements a distributed file system called HDFS\cite{Borthakur2007} for data storage.
+Moreover, hadoop has high capability of fault tolerance, job scheduling, input data splitting, load balance and so on.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Related Work}
+\subsection{Cloud Accelerated Ensemble Learning}
+
+Presently, some work of applying cloud computing to acceleration of ensemble learning has been done to intelligently process large scale data.
+As a typical cloud computing framework, MapReduce is a main option for distributed ensemble learning.
+Some MapReduce accelerated ensemble learning methods have been proposed.
+\par
+In traditional MapReduce programming, nearly all parallelized algorithms have only one single pass.
+Usually, one Map function is utilized for multiple classifiers' training while one Reduce function combines the results.
+The ensemble methods can by classified into two categories.
+One is to use the whole sample set for training of all the classifiers.
+The method called Select Best is evaluated by Jahnke\cite{Jahnke2009} in his MapReduce based ensemble classifier named MRCRAIG.
+In \cite{Alham2012} and \cite{Wu2009}, bootstrap strategy is adopted for data preparation of multiple classifiers' training.
+As all the samples are needed for each Map process, this kind of methods are not suitable for cloud computing, in which data is stored in distributed way.
+\par
+The other is to use the partitioned or diverse sample subsets on various nodes for training of different classifiers.
+In work of Jahnke\cite{Jahnke2009}, a data partitioning and voting based ensemble called Bagging\cite{Breiman1996} is also evaluated.
+Basilico et al.\cite{Basilico2011} propose COMET for ensemble learning on massive data.
+In COMET, IVoting is proposed as a suitable ensemble method for data distributed environment.
+However, Gao et al.\cite{Gao2009} have proven that this kind of ensemble methods do not work in cloud computing as the classifiers lack a representation of the whole data, especially when the sample subsets on different nodes are heterogeneous.
+\par
+Except for single pass ensemble learning algorithms, some work of applying multiple passes MapReduce programming to iterative ensemble learning has been proposed.
+Google applies its multiple passes MapReduce based scalable distributed framework PLANET for tree models learning over large datasets\cite{Panda2009}.
+But PLANET has no open-source version and it needs special modifications of MapReduce for high efficiency.
+Palit et al.\cite{Palit2010} propose two novel algorithams called Parallel ADABOOST and Parallel LOGIBOOST.
+This work facilitates simultaneous participation of multiple computing nodes to construct a boosting classifier with the help of original MapReduce.
+\par
+From the above description, we can find that nearly all the MapReduce accelerated ensemble learning algroithms have no loop.
+Although some work of applying multiple passes MapReduce programming to iterative ensemble algroithms are done by google, no implementation details or open source versions are provided.
+This will limit further improvement of generalization performance in big data training as iterative ensemble algorithms like AdaBoost may construct more representitive neural network set.
+Moreover, characteristic of distributed data storage in cloud is not utilized in these algorithms.
+\par
+
+\subsection{ELM Ensembles}
+
+ELM ensemble is to combine the prediction results of multiple individually trained ELM neural networks for final result with higher accuracy.
+Various novel ELM ensemble algorithms have been proposed.
+A few of them are even accelerated by P2P and GPU parallel computing framework.
+\par
+Liu et al.\cite{Liu2009} proposed simple ensemble of ELM (SE-ELM).
+It combines the results of multiple ELM networks according to the diversity of their output space.
+Similarly, Dianhui et al.\cite{Wang2012} employed the model diversity as fitness function to direct the selection of base learners.
+In the work of  ensemble based ELM (EN-ELM)\cite{Liu2010}, cross-validation is embeded into training phase to overcome the single classifiers' overfitting to partitioned sample subsets.
+Cao et al.\cite{Cao2012} applied simple voting mechanism into the determination of final result from multiple predicted labels.
+In real application, ELM ensemble is applied to sales forecasting in fashion retailing and it outperforms several traditional methods, such as BP neural network\cite{Sun2008}.
+All these ELM ensemble algorithms are similar to Bagging and no iterative resampling is needed.
+Although they outperform single ELM neural network, these simple ensemble methods may suffer from over-fitting or under-fitting and lead to low testing accuracy in big data leaning.
+When training data is very large, iterative ensemble algorithms may contribute to deeper leaning to the whole sample set.
+\par
+Except for \cite{Zhai2012}, few boosting algorithms are applied to ELM ensemble.
+In \cite{Zhai2012}, AdaBoost algorithm is adopted for multiple ELM networks' training and sample entropy is adopted as the criterion for result combination.
+However, as only one classifier is trained in each iteration, the algoirthm has to use membership degree to measure the probability that an instance belongs to a class.
+Less sample prediction information generated in each iteration will lead to lower accuracy in measuring sample entropy and lower combination performance.
+\par
+P2P network and GPU computing have been used to accelerate ELM ensemble.
+Sun et al.\cite{Sun2011} applied OS-ELM to hierarchical P2P network to generate an ensemble class.
+In the work of \cite{Heeswijk2010} and \cite{Heeswijk2011}, training and model structure selection for each individual ELM network are accelerated by GPU.
+However, these present acceleration methods may not suitable for big data leaning.
+And no ELM ensemble algorithm are accelerated by cloud infrastructure including parallel computing and distributed storage.
+%In this paper, we will ehnance the above algorithm through adding multiple single ELM networks in each iteration.
+%Then the probability than an instance belongs to a class can be calculated directly and accurately without the method in fuzzy logic.
+%Moreover, AdaBoost can also be improved by sample entropy.
+%Namely, the instances with high entropy rather than the misclassified instances are more likely to be chosen for training.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Sample Entropy based ELM Ensemble Algorithm on Hadoop Cluster}
+
+\subsection{Calculation of Sample Entropy}
+
+In information theory, Shannon entropy of a discrete random variable $X$ with $n$ outcomes $\left\{ x_1,x_2,\dots,x_n \right\}$ is denoted by $H(X)$ and defined in the following way:
+\begin{equation}
+H(X)=-\sum_{i=1}^{n}p(x_i)\log p(x_i)
+\end{equation}
+where $p(x_i)$  is the probability mass function of outcome $x_i$\cite{Shannon2001}.
+$H(X)$ is to measure the uncertainty of $X$ and it quantifies the expected value of information contained in $X$.
+\par
+In our EC-ELM algroithm, sample entropy is to describe the uncertainty of an instance to a set of classifiers trained in each iteration step.
+The whole sample set is represented as $L=\left\{(x_i,y_i)|x_i \in R^n, y_i \in Y, i=1,2,\dots,N \right\}$, where $Y=\left\{w_1,w_2,\dots,w_K\right\}$ is the set of sample labels.
+Assume $J$ classifiers are trained parallelly in each iteration step, and they format a classifier set $C=\left\{C_1,C_2,\dots,C_J\right\}$.
+The entropy of $x_i$ with respect to classifier set $CS_t$ is calculated according to the following formula:
+\begin{equation}
+SH_t(x_i) = -\sum_{k=1}^{K}p_{kt}(x_i)\log _2 p_{kt}(x_i)
+\end{equation}
+where $p_{kt}(x_i)$ is the propability that sample $x_i$ is predicted as label $k$ with respect to classifier set $CS_t$.
+\par
+Assume the training loop contains $T$ iterations and generated $T$ classifier sets, namely $\left\{CS_1,CS_2,\dots,CS_T\right\}$.
+The normalized entropy of sample $x_i$ with respect to classifier set $CS_t$ is calculated according to the following formula:
+\begin{equation}
+NSH_t(x_i) = \frac{SH_t(x_i)}{\sum_{t=1}^{T}SH_t(x_i)}
+\end{equation}
+The threshold of entropy of sample $x_i$ is defined as follows.
+\begin{equation}
+\delta = \frac{1}{2}(\arg \mathop{\max}_{1 \leq t \leq T}(SH_t(x_i)) - \arg \mathop{\min}_{1 \leq t \leq T}(SH_t(x_i)))
+\end{equation}
+It is to filter the prediction result that leads to too large normalized sample entropy in combination.
+\par
+\subsection{Sample Entropy based ELM Ensemble Algroithm}
+
+In traditional AdaBoost algorithm, only one weak classifier is trained in each iteraction.
+According to the classifier in current iteraction, the weights of each incorrectly classified sample are increased, while the weights of each correctly classified sample are decreased.
+In our sample entropy improved ensemble algorithm, a set of weak classifiers instead of one weak classifier are trained in each iteraction.
+In resampling, the samples with higher sample entropy are assigned higher weights and are more likely to be chosen for ELM training in next iteraction, because these samples have higher uncertainty to current classifier.
+Details of the whole algorithm is shown in Algorithm 1.
+\par
+In each iteraction step, multiple integrated weak classifiers are more representative to the whole large training sample set and have higher classification capability than one weak classifier.
+Therefore, the sample entropy improved resampling method and strategy of training multiple ELM neural networks in each iteraction directly improve iteraction efficiency.
+Meanwhile, they also contribute to a small proportion of the whole sample set for training in each iteraction and this decreases model complexity of each ELM classifier.
+Moreover, as more weak classifiers are used for prediction totally, the final combined classifier's has high generalization performance.
+\par
+\begin{algorithm}[H]
+\caption{Algorithm of Sample Entropy based Iterative ELM Training}
+\label{alg1}
+\begin{algorithmic}
+\REQUIRE Input: activation function $g$ and hidden layer node number $M$ of ELM network, label set $Y=\left\{w_1,w_2,\dots,w_K\right\}$, sample set $L=\left\{(x_i,y_i)|x_i \in R^n, y_i \in Y, i=1,2,\dots,N \right\}$, size of resampled data set $\hat{N}$ and iteration number $T$; Output: sample entropy set $\left\{SH_t(x_i)|t=1,2,\dots,T,i=1,2,\dots,N\right\}$, sample label propability set $\left\{p_{kt}(x_i)|k=1,2,\dots,K,t=1,2,\dots,T,i=1,2,\dots,N \right\}$ and $T$ ELM classifier sets $\left\{CS_1,CS_2,\dots,CS_T \right\}$
+\STATE Step 1) Initialize a distribution of sample weights $D_1$ and iterator: $D_1(i) = \frac{1}{n}, i=1,2,\dots,n$, $t=1$
+\STATE Step 2) Iterative training:
+	\WHILE {$t \leq T$}
+	\STATE a) Resampling and generate sample set $\hat{L}_t=\left\{(x_i,y_i)|x_i \in R^n, y_i \in Y, i=1,2,\dots,\hat{N} \right\}$:
+		\WHILE {$|\hat{L}_t|<\hat{N}$}
+		\STATE a1) Find the maximum value in $D_t$: $d_{max}$
+		\STATE a2) Generate a random number $\beta \in (0,d_{max})$
+		\STATE a3) for $i=1$ to $N$, if $D_t(x_i) \geq \beta$ AND $x_i \notin \hat{L}_t$ then $\hat{L}_t=\hat{L}_t \cup \left\{x_i\right\}$
+		\ENDWHILE
+	\STATE b) Train $J$ ELM classifiers with $\hat{L}_t$: $CS_t=\left\{C_1,C_2,\dots,C_J\right\}$
+	\STATE c) For each sample $x_i$, predict label using each classifier $C_j$ and calculate sample propability set $\left\{p_{kt}(x_i)|k=1,2,\dots,K,i=1,2,\dots,N\right\}$
+	\STATE d) Calculate sample entropy of each sample in $T$ with respect to $CS_t$ according to formula (9): $SH_t(x_i), i=1,2,\dots,N$
+	\STATE e) Update weights: $\gamma_t = \exp(SH_t(x_i))$, $D_{t+1}(x_i)=D_{t}(x_i)\times \gamma_t$
+	\STATE f) Normalize weights: $D_{t+1}(x_i)=\frac{D_{j+1}(x_i)}{\sum_{i=0}^{N}D_{j+1}(x_i)}$
+	\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+\par
+
+\subsection{Sample Entropy based Combination}
+
+Totally, EC-ELM gets the final prediction result of each sample through combining each weak classifier set's prediction propertity with normal sample entropy based weights.
+And the classifier set that cause much higher sample entropy than their neighbors are filttered.
+The results predicted by the left classifier sets are used for combination.
+\par
+The classifier set that causes higher sample entropy are assigned lower weights as the sample has higher uncertainty with respect to that classifier set.
+In our algorithm, the weights of each classifier set are calculated according to the following formula:
+\begin{equation}
+\alpha_t(x_i)=\frac{e^{NSH_{t}(x_i)}}{\sum_{t_0=1}^{\hat{T}}e^{NSH_{t_0}(x_i)}}, t=1,2,\dots,\hat{T}
+\end{equation}
+Sample entropy is normalized to $[0,1]$ through formula (10) and the criterion of normal sample entropy ensures the quantities of all the weights are on the same scale.
+
+\par
+In combination, the property that a sample belongs to a label with respect to a classifier set is multipled by the weight of that classifier set.
+The product acts as votes of that classifier set to that label.
+The label that achieves the most votes from all the left classifier sets is the final prediction result.
+The calculation of final result can be expressed in the following formula:
+\begin{equation}
+o_i = \arg \mathop{\max}_{1 \leq k \leq K}\left\{\frac{1}{\hat{T}} \sum_{t=1}^{\hat{T}} p_{kt}(x_i) \times \alpha_t(x_i) \right\}
+\end{equation}
+\par
+
+\begin{algorithm}[H]
+\caption{Algorithm of Sample Entropy based Combination}
+\label{alg2}
+\begin{algorithmic}
+\REQUIRE Input:sample entropy set $\left\{SH_t(x_i)|i=1,2,\dots,N,t=1,2,\dots,T\right\}$ and sample label propability set $\left\{p_{kt}(x_i)|k=1,2,\dots,K,t=1,2,\dots,T,i=1,2,\dots,N \right\}$; Output: combined prediction results set: $\left\{o_1,o_2,\dots,o_N\right\}$
+\STATE Step 1) Initialize: $i=1$
+\STATE Step 2) For each sample in $L$, combine its predicted labels from $T$ iterations
+	\WHILE{$i \leq N$}
+	\STATE Step a) Calculate the sample's normalized sample entropy $\left\{NSH_t(x_i)|t=1,2,\dots,T\right\}$ according to formula (10)
+	\STATE Step b) Calculate threshold of each sample according to formula (11), get $\delta_i$
+	\STATE Step c) Filter the classifier set $CS_t$ if $NSH_t(x_i) \ge \delta_i$, supporse $\hat{T}$ classifier sets are left
+	\STATE Step d) Calculate each classifier set's weight $\alpha_t(x_i)$ according to formula (12):
+	\STATE Step e) Calculate sample's final prediction label $o_i$ according to formula (13):
+	\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+\subsection{Iterative Training of ELM Sets on Hadoop Cluster}
+
+In EC-ELM, sample entropy based iterative training is accelerated on hadoop cluster for higher big data learning efficiency.
+Multiple ELM networks' training and calculation of sample property as well as sample entropy are parallelly executed on multiple hadoop nodes.
+The workflow of single iteraction is shown in Fig. 1.
+The iteraction number of the algorithm can be adjusted.
+\par
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{framework_entropy.eps}
+\caption{Workflow of Single Iteraction on Hadoop Cluster}
+\label{method}
+\end{center}
+\end{figure}
+\par
+ELM network training and each training sample's prediction is implemented in Map procedure.
+The whole input data consists of multiple copies of training sample set and is partitioned equally for each Map process.
+Namely, each Map process gets a copy of training sample set for training and prediction.
+In Map process, the program resamples from the whole sample set according to loaded sample weights, trains one ELM weak classifier and predicts the training samples using the weak classifier.
+The trained ELM neural networks are written to HDFS as part of the training results.
+Besides, each Map process outputs $N$ paris of tntermediate result $<ik,iv>$.
+$ik$ is the key of constant value and $iv$ is a string consisting of the sample's id, current weight and predicted label.
+\par
+Reduce function is responsible for calculation of a sample's propabilities that belong to each class and each sample's sample entropy.
+As the job of Reduce function costs only a little CPU time, only one Reduce process is set for optimization.
+Then all intermediate pairs are processed in the same Reduce process.
+According to the sample entropy, each sample's new weight is calculated and the weights are normalized.
+The output pairs $<ok,ov>$ are written to HDFS.
+$ok$ is the id for each sample and $ov$ is a string consisting of the sample's propabilities to each class and sample's sample entropy.
+Moreover, the new weights are written to HDFS for next iteration.
+\par
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiments and Evaluation}
+\subsection{Experiments}
+
+Two experiments are designed to prove EC-ELM's higher performance in big data analysis.
+The first experiment is to prove EC-ELM's higher predicting accuracy and stability as well as less complex ELM model based on typical classification benchmarks and real world remote sensing data.
+The second experiment on hadoop clusters with different scale is designed to prove EC-ELM's high efficiency and scalability.
+\par
+\textbf{First Experiment.} Totally, five typical classification benchmarks and one real world land-cover classification data from LANDSAT-5 satellite are tested with EC-ELM.
+The details of the sample sets for the first experiment are shown in Table 1.
+Algorithm 1 and Algorithm 2 are implemented by java programming language and executed on single PC with linux OS, 2G RAM and 4 core Intel i5 CPU.
+To compare with EC-ELM, the same sample sets are tested with single ELM algorithm and simple voting based ELM ensemble algorithm using the same experiment environment.
+In ELM model selection, sin is chosen as activation function and the hidden node number that leads to highest testing accuracy of single ELM is adopted.
+Training and prediction are executed 10 times and both average testing accuracy and standard deviation are calculated for evaluation.
+\par
+\begin{table}[H]
+\caption{Details of Sample Sets}
+\label{table_example}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Name & Classes & Attributes & Training Data & Testing Data\\
+\hline
+Diabetes & 2 & 8 & 618 & 150\\
+\hline
+Satimage & 7 & 36 & 1800 & 510\\
+\hline
+Spambase & 2 & 58 & 4000 & 601\\
+\hline
+Waveform & 3 & 21 & 4400 & 600\\
+\hline
+Segment & 7 & 19 & 1800 & 510\\
+\hline
+LANDSAT-5 & 5 & 3 & 3500 & 1000\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\par
+\textbf{Second Experiment.}
+Three hadoop clusters with the scale of 4 nodes, 6 nodes and 8 nodes are constructed for the second experiment.
+The hadoop version of 1.0.3-1 is adopted.
+Each node is visualized by VisualBox with the same configuration, including Linux OS, JDK 1.6.0\_13, 1G RAM, one core of Intel(R) Xeon(R) CPU E5620 with 2.4GHz.
+The nodes are connected by the network with the bandwith of 1000M/s.
+One node in cluster acts as master and the left ones act as slaves.
+The training algorithm in the first experiment are implemented by MapReduce and HDFS iterfaces provided by hadoop software library.
+In experiment, the MapReduce implemented training program is testes with different sizes of input data both on single node and clusters.
+When executed on clusters,  24 copies of sample set are contained in input files and they are partitioned for 24 Mappers.
+As Reducer is responsible for a little computation, only 1 Reducer is set in MapReduce job.
+Each test is executed 5 times and the average computing time is recorded.
+According to formula (14) and formula (15), speedup and sizeup are calculated for evaluation.
+\begin{equation}
+Speedup = \frac{computing \ time \ on\ 1\ computer}{computing \ time \ on\ cluster},
+\end{equation}
+\begin{equation}
+Sizeup = \frac{computing \ time \ for\ processing\ m\times data}{computing \ time \ for\ processing\ data}.
+\end{equation}
+\subsection{Evaluation of Generalization Performance}
+
+Our first experiment with 5 classification benchmarks and 1 real world land-cover classification sample set shows that EC-ELM has higher generalization performance and helps solve out-of-memory problem in big data leaning.
+The details are shown in Table 2.
+\par
+\textbf{First, Solve Out-of-memory Problem.}
+Large training sample set and complex ELM model sometimes lead to out-of-memory problem when trained on commerical machine or PC.
+In EC-ELM, training of each ELM classifier uses only part of the whole sample set.
+In experiment, resampling data size of EC-ELM is adjusted according to EC-ELM's testing accuracy.
+The size that leads to highest testing accuracy is adopted.
+As shown in Table 2, resampling data size is much less than the size of the whole sample set.
+This can greatly help solve the problem of out-of-memory in big data leaning.
+\par
+\textbf{Second, Higher Testing Accuracy.}
+From Table 2, we can find that EC-ELM had higher average testing accuracy in all the 6 sample sets testing than single ELM and V-ELM.
+In sample set of segment, EC-ELM improves testing accuracy of single ELM as more as about $5\%$.
+While in sample set of satimage, EC-ELM outperforms V-ELM in testing accuracy about $3.5\%$.
+Moreover, EC-ELM improves more when the single classifier has weak classification capability.
+This can be found from the sample set of satimage and segment.
+\par
+\textbf{Third, Lower Standard Deviation.}
+Except for higher average testing accuracy, EC-ELM also has lower standard deviation of testing accruacy.
+First, EC-ELM greatly decreases standard deviation of single ELM.
+In the test of sample set waveform, standard deviation of single ELM is about 10 times higher than EC-ELM.
+Second, EC-ELM achieves lower standard deviation than V-ELM in the test of most sample sets.
+V-ELM outperforms EC-ELM only in the test of two sample sets: satimage and segment.
+\par
+Except for diabetes, all the other 5 sample set has larger size when compared with common machine learning sample set.
+Its higher average testing accuracy and lower standard deviation shows that EC-ELM has higher generalization performance in big data learning.
+Moreover, as only a small proportion of the big sample set is used for single ELM's training, EC-ELM helps solve the problem of out-of-memory in large data training.
+\par
+
+\begin{table}[h]
+\scriptsize{
+\begin{center}
+\begin{tabular}[bt]{|p{1.5cm}|p{1.35cm}|p{1.4cm}||p{1.4cm}|p{1.4cm}||p{1.4cm}|p{1.4cm}||p{1.4cm}|p{1.4cm}|}\hline
+
+ & & & \multicolumn{2}{|c||}{EC-ELM} & \multicolumn{2}{|c||}{ELM} & \multicolumn{2}{|c|}{V-ELM} \\ \cline{4-9}
+Sample Set &Hidden Node Number&Resampling Size&Avg Testing Accuracy &Standard Deviation &Avg Testing Accuracy &Standard Deviation &Avg Testing Accuracy &Standard Deviation \\ \hline
+Diabetes &10&200&$\mathbf{75.0667\%}$ &$\mathbf{0.003651}$ &72.6667\% &0.0149071 &73.8667\% &0.010954 \\ \hline
+Satimage &50&900&$\mathbf{65.3200\%}$ &0.008885 &61.1800\% &0.008106\% &61.8000\% &$\mathbf{0.001696}$ \\ \hline
+Spambase &50&1000&$\mathbf{86.2562\%}$ &$\mathbf{0.005593}$ &83.0616\% &0.0123062 &84.5258\% &0.0171712 \\ \hline
+Waveform &20&1000&$\mathbf{82.2667\%}$ &$\mathbf{0.002527}$ &79.0667\% &0.025183 &82.0667\% &0.013622 \\ \hline
+Segment &10&900&$\mathbf{79.1373\%}$ &0.027472 &74.1569\% &0.034867 &76.1569\% &$\mathbf{0.0109700}$ \\ \hline
+LANDSAT-5 &10&1500&$\mathbf{91.5333\%}$ &$\mathbf{0.002582}$ &90.6267\% &0.009087 &91.0800\% &0.005445 \\ \hline
+\end{tabular}
+\caption{Generalization Performance of EC-ELM, ELM and V-ELM}
+\label{specification}
+\end{center}
+}
+\end{table}
+
+
+
+\subsection{Evaluation of Efficiency and Scalability}
+
+MapReduce implemented iterative ELM training of EC-ELM shows high efficiency and scalability on hadoop cluster.
+Speedup and sizeup with different iteraction numbers on 4 nodes, 6 nodes and 8 nodes hadoop clusters are shown in Figure 2 and Figure 3.
+\par
+\textbf{First, Efficiency.}
+From Figure 2, we can find that 4 nodes cluster outperforms single machine when training data size is larger than about 5000, while 6 nodes cluster and 8 nodes cluster outperforms single machine when training data size is larger than about 4000.
+4 nodes cluster has a speedup higher than 1.5 when sample set is large enough.
+When size of sample set is larger than 7000, 6 nodes cluster outperforms single machine 2 times and 8 nodes cluster outperforms single machine 2.5 times.
+Therefore, hadoop cluster do accelerates iteractive training when sample set is large and the larger cluster achieves higher efficiency than single machine.
+Moreover, iteraction number impacts efficiency on hadoop cluster only a little.
+Especially when the cluster has 8 nodes, the four training procedures with different iteraction number have similar speedup lines in four subgraphs.
+\par
+\begin{figure}[H]
+\centering
+\subfigure[5 Iteractions]{
+\label{Fig.sub.1}
+\includegraphics[width=0.45\textwidth]{speedup_5iteraction.eps}}
+\subfigure[7 Iteractions]{
+\label{Fig.sub.2}
+\includegraphics[width=0.45\textwidth]{speedup_7iteraction.eps}}
+\subfigure[9 Iteractions]{
+\label{Fig.sub.3}
+\includegraphics[width=0.45\textwidth]{speedup_9iteraction.eps}}
+\subfigure[11 Iteractions]{
+\label{Fig.sub.4}
+\includegraphics[width=0.45\textwidth]{speedup_11iteraction.eps}}
+\caption{Speedup of Iteractive Training on Hadoop Cluster}
+\label{Fig.lable}
+\end{figure}
+\par
+
+\textbf{Second, Scalability.}
+Sizeups of training with different iteraction number are shown in Figure 3.
+Except for 5 iteractions on 4 nodes cluster, the slopes of all the other lines is less than or equals to 1 when $m$ increases from 1 to 10.
+For example, sizeup of 7 iteracitons on 8 nodes cluster increase from 1 to about 4.5 when $m$ increases from 1 to 10 and the total slope is about 0.39.
+This means that training time increases more slowly than training data size and the hadoop accelerated iterative training is capable of enlarging sample set in computing complexity.
+Moreover, cluster with more nodes has lower slope as shown in all the four subgraphs.
+The slope of 8 nodes cluster is about 0.4 and is much smaller than 4 nodes cluster.
+Totally, the MapReduce implemented iterative training algorithm has high scalability for big data learning in computing complexity.
+\begin{figure}[H]
+\centering
+\subfigure[5 Iteractions]{
+\label{Fig.sub.1}
+\includegraphics[width=0.45\textwidth]{sizeup_5iteraction.eps}}
+\subfigure[7 Iteractions]{
+\label{Fig.sub.2}
+\includegraphics[width=0.45\textwidth]{sizeup_7iteraction.eps}}
+\subfigure[9 Iteractions]{
+\label{Fig.sub.3}
+\includegraphics[width=0.45\textwidth]{sizeup_9iteraction.eps}}
+\subfigure[11 Iteractions]{
+\label{Fig.sub.4}
+\includegraphics[width=0.45\textwidth]{sizeup_11iteraction.eps}}
+\caption{Sizeup of Iteractive Training on Hadoop Cluster}
+\label{Fig.lable}
+\end{figure}
+\par
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+Machine leaning is a major approach for big data analysis.
+However, many traditional machine learning methods face the problems of over-fitting, out-of-memory, low efficiency and so on.
+In this paper, a sample entropy based Extreme Leaning Machine called EC-ELM is proposed for big data leaning.
+Sample entropy acts as key role in EC-ELM.
+In iteractively training of multiple ELMs, sample entropy is adopted as the criterion for resampling.
+In result combination, weights of each ELM set are calcuated based on sample entropy.
+The experiment on 5 typical benchmarks and 1 real world land-cover classification sample set shows that EC-ELM can achieve higher generalization performance in big data leaning than single ELM and traditional voting based ELM ensemble method.
+And the small resampling data size helps solve the problem of out-of-memory in big data training with ELM on PC or commerical machine.
+Moreover, EC-ELM has high efficiency and scalability when accelerated by hadoop cluster.
+In the second experiment, EC-ELM is implemented by MapReduce and shows high speedup and low sizeup on hadoop clusters with different size.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Acknowledgements}
+
+
+%==========================================================
+% Back Matter (References and Notes)
+%----------------------------------------------------------
+% Style and layout of the references
+%\bibliographystyle{mdpi}
+\makeatletter
+\renewcommand\@biblabel[1]{#1. }
+\makeatother
+%----------------------------------------------------------
+% Use the following option to include external BibTeX files:
+\bibliography{./entropy}
+%----------------------------------------------------------
+
+%\begin{thebibliography}{1}
+
+%\end{thebibliography}
+
+\end{document}
+
+
